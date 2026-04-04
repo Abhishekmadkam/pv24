@@ -84,7 +84,7 @@
         }
 
         .loader-text {
-            font-size: 2.8rem;
+            font-size: clamp(1.8rem, 8vw, 3.5rem);
             font-weight: 700;
             letter-spacing: 8px;
             background: linear-gradient(90deg, #ffffff, var(--primary), var(--secondary), var(--accent));
@@ -109,9 +109,9 @@
 
         .progress-bar-track {
             width: 100%;
-            height: 2px;
+            height: 3px;
             background: rgba(255, 255, 255, 0.1);
-            border-radius: 2px;
+            border-radius: 10px;
             overflow: hidden;
         }
 
@@ -120,7 +120,7 @@
             background: linear-gradient(90deg, var(--primary), var(--secondary), var(--accent));
             width: 0%;
             transition: width 0.2s ease-out;
-            box-shadow: 0 0 15px rgba(168, 85, 247, 0.6);
+            box-shadow: 0 0 20px rgba(168, 85, 247, 0.8);
         }
 
         .loading-text {
@@ -138,8 +138,8 @@
             background: rgba(10, 14, 39, 0.6);
             backdrop-filter: blur(20px);
             border-bottom: 1px solid var(--border-color);
-            padding: 1.5rem 2rem;
-            min-height: 100px;
+            padding: clamp(1rem, 3vw, 1.5rem);
+            min-height: clamp(80px, 12vw, 100px);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -148,7 +148,7 @@
 
         .ads-top-content {
             width: 100%;
-            max-width: 1000px;
+            max-width: 1200px;
             display: flex;
             justify-content: center;
         }
@@ -156,7 +156,7 @@
         .ads-label {
             position: absolute;
             top: 8px;
-            left: 2rem;
+            left: clamp(0.5rem, 2vw, 2rem);
             font-size: 0.65rem;
             letter-spacing: 2px;
             color: rgba(255, 255, 255, 0.4);
@@ -171,7 +171,7 @@
             left: 0;
             right: 0;
             z-index: 100;
-            padding: 1rem 2.5rem;
+            padding: clamp(0.8rem, 2vw, 1rem) clamp(1rem, 3vw, 2.5rem);
             background: rgba(10, 14, 39, 0.85);
             backdrop-filter: blur(24px);
             border-bottom: 1px solid var(--border-color);
@@ -179,12 +179,12 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            gap: 2rem;
+            gap: clamp(1rem, 2vw, 2rem);
             flex-wrap: wrap;
         }
 
         .navbar.scrolled {
-            padding: 0.75rem 2.5rem;
+            padding: 0.6rem clamp(1rem, 3vw, 2.5rem);
             background: rgba(10, 14, 39, 0.95);
             border-bottom: 1px solid var(--border-hover);
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
@@ -193,15 +193,15 @@
         .nav-left {
             display: flex;
             align-items: center;
-            gap: 2rem;
+            gap: clamp(1rem, 2vw, 2rem);
             flex: 1;
         }
 
         .logo {
             font-family: 'Syne', sans-serif;
-            font-size: 1.3rem;
+            font-size: clamp(1rem, 2.5vw, 1.4rem);
             font-weight: 800;
-            letter-spacing: 3px;
+            letter-spacing: 2px;
             background: linear-gradient(135deg, #ffffff 0%, var(--primary) 50%, var(--accent) 100%);
             -webkit-background-clip: text;
             background-clip: text;
@@ -213,14 +213,14 @@
 
         .nav-links {
             display: flex;
-            gap: 2rem;
+            gap: clamp(1rem, 2vw, 2rem);
             align-items: center;
         }
 
         .nav-links a {
             color: var(--text-secondary);
             text-decoration: none;
-            font-size: 0.85rem;
+            font-size: clamp(0.7rem, 1vw, 0.85rem);
             font-weight: 600;
             letter-spacing: 1.5px;
             transition: color var(--transition);
@@ -255,9 +255,9 @@
             background: rgba(255, 255, 255, 0.05);
             border: 1px solid var(--border-color);
             border-radius: 50px;
-            padding: 0.7rem 1.5rem;
+            padding: clamp(0.6rem, 1vw, 0.8rem) clamp(1rem, 2vw, 1.5rem);
             transition: all var(--transition);
-            flex: 0 1 300px;
+            flex: 0 1 clamp(200px, 25vw, 350px);
         }
 
         .search-container:focus-within {
@@ -275,7 +275,7 @@
             background: transparent;
             border: none;
             color: var(--text-primary);
-            font-size: 0.9rem;
+            font-size: clamp(0.8rem, 1.5vw, 0.9rem);
             width: 100%;
             outline: none;
             font-family: inherit;
@@ -293,12 +293,12 @@
 
         .nav-cta {
             background: linear-gradient(135deg, var(--primary), var(--secondary));
-            padding: 0.65rem 1.8rem;
+            padding: clamp(0.5rem, 1vw, 0.65rem) clamp(1.2rem, 2vw, 1.8rem);
             border: none;
             border-radius: 50px;
             color: white;
             font-weight: 700;
-            font-size: 0.8rem;
+            font-size: clamp(0.65rem, 1vw, 0.8rem);
             letter-spacing: 1px;
             cursor: pointer;
             transition: all var(--transition);
@@ -323,7 +323,7 @@
             max-height: 60vh;
             background: var(--card-bg);
             border: 1px solid var(--border-color);
-            border-radius: 16px;
+            border-radius: 20px;
             backdrop-filter: blur(32px);
             z-index: 99;
             display: none;
@@ -362,7 +362,7 @@
         }
 
         .search-result-icon {
-            font-size: 1.8rem;
+            font-size: clamp(1.5rem, 3vw, 1.8rem);
         }
 
         .search-result-info {
@@ -396,16 +396,16 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 6rem 2rem 2rem;
+            padding: clamp(4rem, 8vw, 6rem) clamp(1rem, 3vw, 2rem) clamp(1rem, 3vw, 2rem);
             scroll-margin-top: 80px;
         }
 
         .content-card {
-            background: var(--card-bg);
+            background: rgba(15, 23, 42, 0.7);
             backdrop-filter: blur(32px);
             border-radius: 24px;
             border: 1px solid var(--border-color);
-            padding: 3.5rem 4rem;
+            padding: clamp(2rem, 5vw, 4rem);
             text-align: center;
             max-width: 1400px;
             width: 100%;
@@ -421,10 +421,10 @@
         /* Hero */
         .hero-title {
             font-family: 'Syne', sans-serif;
-            font-size: clamp(2.5rem, 8vw, 5.5rem);
+            font-size: clamp(2.2rem, 7vw, 5.5rem);
             font-weight: 800;
             letter-spacing: -1px;
-            margin-bottom: 1.5rem;
+            margin-bottom: clamp(1rem, 2vw, 1.5rem);
             background: linear-gradient(135deg, #ffffff 0%, var(--primary) 40%, var(--accent) 100%);
             -webkit-background-clip: text;
             background-clip: text;
@@ -433,9 +433,9 @@
         }
 
         .hero-subtitle {
-            font-size: 1.1rem;
+            font-size: clamp(0.9rem, 2vw, 1.1rem);
             color: var(--text-secondary);
-            margin-bottom: 2.5rem;
+            margin-bottom: clamp(1.5rem, 3vw, 2.5rem);
             font-weight: 500;
             letter-spacing: 2px;
             text-transform: uppercase;
@@ -446,13 +446,13 @@
             align-items: center;
             justify-content: center;
             gap: 0.75rem;
-            padding: 1rem 2.5rem;
+            padding: clamp(0.8rem, 2vw, 1rem) clamp(1.5rem, 3vw, 2.5rem);
             background: linear-gradient(135deg, var(--primary), var(--secondary));
             border: none;
             border-radius: 50px;
             color: white;
             font-weight: 700;
-            font-size: 1rem;
+            font-size: clamp(0.85rem, 1.5vw, 1rem);
             letter-spacing: 1px;
             cursor: pointer;
             transition: all var(--transition);
@@ -474,21 +474,21 @@
         /* Section Title */
         .section-title {
             font-family: 'Syne', sans-serif;
-            font-size: clamp(1.8rem, 5vw, 3.2rem);
+            font-size: clamp(1.6rem, 5vw, 3.2rem);
             font-weight: 800;
             letter-spacing: -1px;
-            margin-bottom: 3rem;
+            margin-bottom: clamp(2rem, 4vw, 3rem);
             background: linear-gradient(120deg, var(--text-primary), var(--primary), var(--accent));
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
         }
 
-        /* Games Grid */
+        /* ========== GAMES GRID - HEXAGON CARDS ========== */
         .games-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-            gap: 2rem;
+            grid-template-columns: repeat(auto-fill, minmax(clamp(160px, 20vw, 260px), 1fr));
+            gap: clamp(1.5rem, 3vw, 2.5rem);
             width: 100%;
             margin-top: 2rem;
         }
@@ -496,9 +496,9 @@
         .game-card {
             background: linear-gradient(135deg, rgba(30, 40, 80, 0.6), rgba(20, 30, 60, 0.4));
             backdrop-filter: blur(16px);
-            border-radius: 20px;
-            padding: 2rem 1.5rem;
-            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: clamp(1.5rem, 3vw, 2.5rem) clamp(1rem, 2vw, 1.5rem);
+            border: 2px solid var(--border-color);
             cursor: pointer;
             transition: all var(--transition);
             position: relative;
@@ -506,7 +506,10 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 0.8rem;
+            gap: clamp(0.6rem, 1.5vw, 0.8rem);
+            clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+            min-height: clamp(200px, 30vw, 320px);
+            justify-content: center;
         }
 
         .game-card::before {
@@ -516,7 +519,7 @@
             left: -100%;
             width: 100%;
             height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(168, 85, 247, 0.2), transparent);
+            background: linear-gradient(90deg, transparent, rgba(168, 85, 247, 0.3), transparent);
             transition: left 0.6s ease;
             z-index: 0;
         }
@@ -527,23 +530,23 @@
 
         .game-card:hover {
             border-color: var(--border-hover);
-            box-shadow: 0 20px 50px rgba(168, 85, 247, 0.2);
-            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 20px 50px rgba(168, 85, 247, 0.3), inset 0 0 20px rgba(168, 85, 247, 0.1);
+            transform: translateY(-12px) scale(1.05);
         }
 
         .game-icon {
-            font-size: 3.5rem;
+            font-size: clamp(2.5rem, 6vw, 4rem);
             transition: transform var(--transition);
             z-index: 1;
         }
 
         .game-card:hover .game-icon {
-            transform: scale(1.15) rotate(-8deg);
+            transform: scale(1.2) rotate(-8deg);
         }
 
         .game-title {
             font-family: 'Syne', sans-serif;
-            font-size: 1.2rem;
+            font-size: clamp(0.9rem, 2vw, 1.2rem);
             font-weight: 700;
             letter-spacing: 1px;
             background: linear-gradient(120deg, var(--text-primary), var(--primary));
@@ -554,32 +557,54 @@
         }
 
         .game-info {
-            font-size: 0.75rem;
+            font-size: clamp(0.65rem, 1.5vw, 0.75rem);
             color: var(--text-secondary);
             letter-spacing: 0.5px;
             text-transform: uppercase;
             z-index: 1;
         }
 
-        /* Categories Grid */
+        /* ========== CATEGORIES GRID - ROUNDED RECTANGLES ========== */
         .categories-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-            gap: 1.5rem;
+            grid-template-columns: repeat(auto-fill, minmax(clamp(140px, 18vw, 180px), 1fr));
+            gap: clamp(1rem, 2.5vw, 1.8rem);
             width: 100%;
             margin-top: 2rem;
         }
 
         .category-card {
-            background: rgba(20, 30, 60, 0.5);
-            backdrop-filter: blur(12px);
-            border-radius: 16px;
-            padding: 1.5rem 1.2rem;
-            border: 1px solid var(--border-color);
+            background: linear-gradient(135deg, rgba(34, 211, 238, 0.15), rgba(168, 85, 247, 0.15));
+            backdrop-filter: blur(16px);
+            border-radius: 20px;
+            padding: clamp(1.5rem, 3vw, 2rem) clamp(0.8rem, 2vw, 1.2rem);
+            border: 2px solid var(--border-color);
             cursor: pointer;
             transition: all var(--transition);
             text-align: center;
             position: relative;
+            overflow: hidden;
+            min-height: clamp(160px, 25vw, 240px);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .category-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(168, 85, 247, 0.2) 0%, transparent 70%);
+            transition: all 0.6s ease;
+            z-index: 0;
+        }
+
+        .category-card:hover::before {
+            transform: scale(1.5);
         }
 
         .category-card::after {
@@ -589,11 +614,12 @@
             left: 0;
             right: 0;
             height: 3px;
-            background: linear-gradient(90deg, var(--primary), var(--accent));
+            background: linear-gradient(90deg, var(--primary), var(--secondary), var(--accent));
             border-radius: 3px;
             transform: scaleX(0);
             transform-origin: left;
             transition: transform var(--transition);
+            z-index: 1;
         }
 
         .category-card:hover::after {
@@ -601,80 +627,105 @@
         }
 
         .category-card:hover {
-            border-color: var(--border-hover);
-            box-shadow: 0 12px 32px rgba(34, 211, 238, 0.15);
-            transform: translateY(-6px);
+            border-color: var(--accent);
+            box-shadow: 0 15px 40px rgba(34, 211, 238, 0.25), inset 0 0 15px rgba(34, 211, 238, 0.1);
+            transform: translateY(-10px);
         }
 
         .category-icon {
-            font-size: 2.5rem;
-            margin-bottom: 0.6rem;
+            font-size: clamp(2rem, 5vw, 3.2rem);
+            margin-bottom: clamp(0.4rem, 1vw, 0.8rem);
             transition: transform var(--transition);
+            z-index: 2;
         }
 
         .category-card:hover .category-icon {
-            transform: scale(1.2) rotate(5deg);
+            transform: scale(1.25) rotate(10deg);
         }
 
         .category-name {
             font-family: 'Syne', sans-serif;
             font-weight: 700;
-            font-size: 1rem;
+            font-size: clamp(0.85rem, 2vw, 1.1rem);
             letter-spacing: 0.5px;
-            margin-bottom: 0.4rem;
+            margin-bottom: clamp(0.3rem, 0.8vw, 0.5rem);
+            z-index: 2;
         }
 
         .category-count {
-            font-size: 0.65rem;
+            font-size: clamp(0.6rem, 1.2vw, 0.75rem);
             color: var(--text-secondary);
             letter-spacing: 0.5px;
             text-transform: uppercase;
+            z-index: 2;
         }
 
-        /* Features Grid */
+        /* ========== FEATURES GRID - DIAMOND/ROTATED SQUARES ========== */
         .features-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-            gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(clamp(140px, 20vw, 200px), 1fr));
+            gap: clamp(1.5rem, 3vw, 2.5rem);
             width: 100%;
             margin-top: 2rem;
         }
 
         .feature-card {
-            background: rgba(20, 30, 60, 0.4);
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.15), rgba(168, 85, 247, 0.15));
             backdrop-filter: blur(12px);
-            border-radius: 16px;
-            padding: 2rem 1.5rem;
-            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            padding: clamp(1.5rem, 3vw, 2.5rem);
+            border: 2px solid var(--border-color);
             text-align: center;
             transition: all var(--transition);
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 1rem;
+            gap: clamp(0.8rem, 1.5vw, 1.2rem);
+            transform: rotate(45deg);
+            min-height: clamp(160px, 25vw, 240px);
+            justify-content: center;
+            position: relative;
+        }
+
+        .feature-card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, var(--primary), var(--secondary), var(--accent));
+            opacity: 0;
+            transition: opacity var(--transition);
+            border-radius: 4px;
+            z-index: 0;
+        }
+
+        .feature-card:hover::before {
+            opacity: 0.1;
         }
 
         .feature-card:hover {
-            border-color: var(--border-hover);
-            background: rgba(30, 40, 80, 0.6);
-            transform: translateY(-6px);
-            box-shadow: 0 12px 32px rgba(168, 85, 247, 0.15);
+            border-color: var(--secondary);
+            box-shadow: 0 15px 40px rgba(59, 130, 246, 0.25);
+            transform: rotate(45deg) scale(1.08) translateY(-8px);
         }
 
         .feature-icon {
-            font-size: 3rem;
+            font-size: clamp(2rem, 5vw, 3.5rem);
             transition: transform var(--transition);
+            z-index: 1;
+            transform: rotate(-45deg);
         }
 
         .feature-card:hover .feature-icon {
-            transform: scale(1.15);
+            transform: rotate(-45deg) scale(1.2);
         }
 
         .feature-name {
             font-family: 'Syne', sans-serif;
             font-weight: 700;
-            font-size: 1rem;
+            font-size: clamp(0.8rem, 1.8vw, 1rem);
             letter-spacing: 1px;
+            transform: rotate(-45deg);
+            z-index: 1;
         }
 
         /* ========== BOTTOM AD SPACE ========== */
@@ -684,8 +735,8 @@
             background: rgba(10, 14, 39, 0.6);
             backdrop-filter: blur(20px);
             border-top: 1px solid var(--border-color);
-            padding: 1.5rem 2rem;
-            min-height: 100px;
+            padding: clamp(1rem, 3vw, 1.5rem);
+            min-height: clamp(80px, 12vw, 100px);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -693,7 +744,7 @@
 
         .ads-bottom-content {
             width: 100%;
-            max-width: 1000px;
+            max-width: 1200px;
             display: flex;
             justify-content: center;
         }
@@ -701,7 +752,7 @@
         .ads-label-bottom {
             position: absolute;
             top: 8px;
-            left: 2rem;
+            left: clamp(0.5rem, 2vw, 2rem);
             font-size: 0.65rem;
             letter-spacing: 2px;
             color: rgba(255, 255, 255, 0.4);
@@ -716,7 +767,7 @@
             background: rgba(10, 14, 39, 0.8);
             backdrop-filter: blur(20px);
             border-top: 1px solid var(--border-color);
-            padding: 3rem 2.5rem;
+            padding: clamp(2rem, 4vw, 3.5rem) clamp(1rem, 3vw, 2.5rem);
             text-align: center;
         }
 
@@ -724,12 +775,12 @@
             max-width: 1200px;
             margin: 0 auto;
             display: grid;
-            gap: 2rem;
+            gap: clamp(1.5rem, 3vw, 2.5rem);
         }
 
         .footer-links {
             display: flex;
-            gap: 2rem;
+            gap: clamp(1rem, 2vw, 2.5rem);
             justify-content: center;
             flex-wrap: wrap;
         }
@@ -739,36 +790,66 @@
             text-decoration: none;
             font-family: 'Space Mono', monospace;
             font-weight: 600;
-            font-size: 0.8rem;
+            font-size: clamp(0.65rem, 1.2vw, 0.85rem);
             letter-spacing: 1px;
             transition: all var(--transition);
             text-transform: uppercase;
+            position: relative;
+        }
+
+        .footer-links a::before {
+            content: '';
+            position: absolute;
+            bottom: -3px;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, var(--primary), var(--accent));
+            transform: scaleX(0);
+            transition: transform var(--transition);
+        }
+
+        .footer-links a:hover::before {
+            transform: scaleX(1);
         }
 
         .footer-links a:hover {
             color: var(--primary);
-            text-shadow: 0 0 12px rgba(168, 85, 247, 0.4);
         }
 
         .footer-copyright {
-            font-size: 0.75rem;
+            font-size: clamp(0.65rem, 1vw, 0.8rem);
             color: rgba(255, 255, 255, 0.5);
             letter-spacing: 1px;
             text-transform: uppercase;
         }
 
-        /* Responsive */
+        /* ========== RESPONSIVE DESIGN ========== */
+        @media (max-width: 1440px) {
+            .games-grid {
+                grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+            }
+
+            .categories-grid {
+                grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+            }
+
+            .features-grid {
+                grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            }
+        }
+
         @media (max-width: 1024px) {
             .navbar {
-                padding: 0.8rem 1.5rem;
+                padding: 0.7rem clamp(1rem, 2vw, 1.5rem);
             }
 
             .nav-left {
-                gap: 1.5rem;
+                gap: clamp(1rem, 1.5vw, 1.5rem);
             }
 
             .search-container {
-                flex: 0 1 250px;
+                flex: 0 1 clamp(180px, 20vw, 300px);
             }
 
             .games-grid {
@@ -777,31 +858,35 @@
             }
 
             .categories-grid {
-                grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+                grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
             }
 
-            .ads-top-container,
-            .ads-bottom-container {
-                padding: 1rem;
-                min-height: 90px;
+            .features-grid {
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
             }
 
-            .ads-label,
-            .ads-label-bottom {
-                left: 1rem;
+            .game-card {
+                padding: 1.5rem 1rem;
+            }
+
+            section {
+                padding: 4rem 1.5rem 1.5rem;
             }
         }
 
         @media (max-width: 768px) {
             .navbar {
-                padding: 0.8rem 1rem;
-                flex-wrap: wrap;
-                gap: 1rem;
+                padding: 0.6rem 1rem;
+                gap: 0.8rem;
             }
 
             .nav-left {
                 flex: 1 1 100%;
-                gap: 1rem;
+                gap: 0.8rem;
+            }
+
+            .logo {
+                font-size: clamp(0.9rem, 3vw, 1.1rem);
             }
 
             .search-container {
@@ -819,21 +904,52 @@
             }
 
             section {
-                padding: 5rem 1rem 1rem;
+                padding: 3.5rem 1rem 1rem;
+                min-height: auto;
             }
 
             .content-card {
-                padding: 2rem 1.5rem;
+                padding: clamp(1.5rem, 3vw, 2.5rem);
                 border-radius: 16px;
             }
 
+            .section-title {
+                font-size: clamp(1.4rem, 4vw, 2.2rem);
+                margin-bottom: clamp(1.5rem, 3vw, 2.5rem);
+            }
+
             .games-grid {
-                grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+                grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+                gap: 1rem;
+            }
+
+            .game-card {
+                padding: 1.2rem 0.8rem;
+                min-height: clamp(160px, 30vw, 240px);
+            }
+
+            .game-icon {
+                font-size: clamp(2rem, 5vw, 3rem);
             }
 
             .categories-grid {
-                grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+                grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+                gap: 0.8rem;
+            }
+
+            .category-card {
+                padding: 1rem 0.6rem;
+                min-height: clamp(140px, 22vw, 200px);
+            }
+
+            .features-grid {
+                grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
                 gap: 1rem;
+            }
+
+            .feature-card {
+                padding: 1.2rem;
+                min-height: clamp(140px, 22vw, 200px);
             }
 
             .ads-top-container,
@@ -845,8 +961,89 @@
 
             .ads-label,
             .ads-label-bottom {
-                font-size: 0.6rem;
-                left: 0.5rem;
+                font-size: 0.55rem;
+                left: 0.8rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .logo {
+                font-size: clamp(0.8rem, 2.5vw, 0.95rem);
+                letter-spacing: 1.5px;
+            }
+
+            .nav-cta {
+                padding: 0.5rem 1rem;
+                font-size: 0.65rem;
+            }
+
+            .hero-title {
+                font-size: clamp(1.8rem, 5vw, 3rem);
+            }
+
+            .games-grid {
+                grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+                gap: 0.8rem;
+            }
+
+            .game-card {
+                padding: 1rem 0.6rem;
+                min-height: clamp(140px, 35vw, 180px);
+                gap: 0.4rem;
+            }
+
+            .game-icon {
+                font-size: clamp(1.8rem, 4vw, 2.5rem);
+            }
+
+            .game-title {
+                font-size: clamp(0.75rem, 1.5vw, 0.9rem);
+            }
+
+            .categories-grid {
+                grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+                gap: 0.6rem;
+            }
+
+            .category-card {
+                padding: 0.8rem 0.5rem;
+                min-height: clamp(120px, 20vw, 160px);
+            }
+
+            .category-icon {
+                font-size: clamp(1.6rem, 4vw, 2.4rem);
+                margin-bottom: 0.3rem;
+            }
+
+            .category-name {
+                font-size: clamp(0.75rem, 1.5vw, 0.9rem);
+            }
+
+            .features-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 0.8rem;
+            }
+
+            .feature-card {
+                padding: 1rem;
+                min-height: clamp(120px, 20vw, 160px);
+                gap: 0.6rem;
+            }
+
+            .feature-icon {
+                font-size: clamp(1.6rem, 4vw, 2.4rem);
+            }
+
+            .feature-name {
+                font-size: clamp(0.7rem, 1.2vw, 0.85rem);
+            }
+
+            section {
+                padding: 2.5rem 0.8rem 0.8rem;
+            }
+
+            .content-card {
+                padding: 1.5rem 1rem;
             }
         }
 
@@ -862,6 +1059,10 @@
         ::-webkit-scrollbar-thumb {
             background: linear-gradient(180deg, var(--primary), var(--secondary));
             border-radius: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: linear-gradient(180deg, var(--secondary), var(--accent));
         }
 
         .hidden {
@@ -917,7 +1118,6 @@
 <div class="ads-top-container">
     <div class="ads-label">Advertisement</div>
     <div class="ads-top-content">
-        <!-- Google Ad Code for Top Banner (728x90 or responsive) -->
         <ins class="adsbygoogle"
              style="display:block; max-width:100%; height:auto;"
              data-ad-client="ca-pub-xxxxxxxxxxxxxxxx"
@@ -942,32 +1142,90 @@
     </div>
 </section>
 
-<!-- GAMES SECTION -->
+<!-- GAMES SECTION - HEXAGON CARDS -->
 <section id="games">
     <div class="content-card">
-        <h2 class="section-title">Featured Games</h2>
+        <h2 class="section-title">⚡ Featured Games</h2>
         <div class="games-grid" id="games-grid">
             <!-- Games will be populated by JavaScript -->
         </div>
-        <div id="game-feedback" style="margin-top: 2rem; font-size: 0.95rem; color: var(--accent); letter-spacing: 1px; min-height: 20px;"></div>
+        <div id="game-feedback" style="margin-top: 2rem; font-size: clamp(0.85rem, 1.5vw, 1rem); color: var(--accent); letter-spacing: 1px; min-height: 20px;"></div>
     </div>
 </section>
 
-<!-- CATEGORIES SECTION -->
+<!-- CATEGORIES SECTION - ROUNDED RECTANGLES -->
 <section id="categories">
     <div class="content-card">
-        <h2 class="section-title">Game Categories</h2>
-        <div class="categories-grid" id="categories-grid">
-            <!-- Categories will be populated by JavaScript -->
+        <h2 class="section-title">🎮 Game Categories</h2>
+        <div class="categories-grid">
+            <div class="category-card">
+                <div class="category-icon">⚔️</div>
+                <h3 class="category-name">Action</h3>
+                <p class="category-count">7 Games</p>
+            </div>
+
+            <div class="category-card">
+                <div class="category-icon">🏁</div>
+                <h3 class="category-name">Racing</h3>
+                <p class="category-count">5 Games</p>
+            </div>
+
+            <div class="category-card">
+                <div class="category-icon">♟️</div>
+                <h3 class="category-name">Strategy</h3>
+                <p class="category-count">4 Games</p>
+            </div>
+
+            <div class="category-card">
+                <div class="category-icon">🐉</div>
+                <h3 class="category-name">RPG</h3>
+                <p class="category-count">3 Games</p>
+            </div>
+
+            <div class="category-card">
+                <div class="category-icon">👾</div>
+                <h3 class="category-name">Arcade</h3>
+                <p class="category-count">3 Games</p>
+            </div>
+
+            <div class="category-card">
+                <div class="category-icon">🗺️</div>
+                <h3 class="category-name">Adventure</h3>
+                <p class="category-count">2 Games</p>
+            </div>
+
+            <div class="category-card">
+                <div class="category-icon">🧩</div>
+                <h3 class="category-name">Puzzle</h3>
+                <p class="category-count">2 Games</p>
+            </div>
+
+            <div class="category-card">
+                <div class="category-icon">⚽</div>
+                <h3 class="category-name">Sports</h3>
+                <p class="category-count">3 Games</p>
+            </div>
+
+            <div class="category-card">
+                <div class="category-icon">🎯</div>
+                <h3 class="category-name">Shooter</h3>
+                <p class="category-count">2 Games</p>
+            </div>
+
+            <div class="category-card">
+                <div class="category-icon">✨</div>
+                <h3 class="category-name">Fantasy</h3>
+                <p class="category-count">2 Games</p>
+            </div>
         </div>
-        <div id="category-feedback" style="margin-top: 2rem; font-size: 0.95rem; color: var(--primary); letter-spacing: 1px; min-height: 20px;"></div>
+        <div id="category-feedback" style="margin-top: 2rem; font-size: clamp(0.85rem, 1.5vw, 1rem); color: var(--primary); letter-spacing: 1px; min-height: 20px;"></div>
     </div>
 </section>
 
-<!-- FEATURES SECTION -->
+<!-- FEATURES SECTION - DIAMOND CARDS -->
 <section id="features">
     <div class="content-card">
-        <h2 class="section-title">Platform Features</h2>
+        <h2 class="section-title">🚀 Platform Features</h2>
         <div class="features-grid">
             <div class="feature-card">
                 <div class="feature-icon">🌐</div>
@@ -1001,7 +1259,6 @@
 <div class="ads-bottom-container">
     <div class="ads-label-bottom">Advertisement</div>
     <div class="ads-bottom-content">
-        <!-- Google Ad Code for Bottom Banner (728x90 or responsive) -->
         <ins class="adsbygoogle"
              style="display:block; max-width:100%; height:auto;"
              data-ad-client="ca-pub-xxxxxxxxxxxxxxxx"
@@ -1056,20 +1313,6 @@
         { id: 20, name: 'Echo Protocol', icon: '🔊', category: 'strategy', info: 'Mind Games' },
     ];
 
-    // ========== CATEGORIES DATA ==========
-    const categoriesData = [
-        { id: 1, name: 'Action', icon: '⚔️', games: 7 },
-        { id: 2, name: 'Racing', icon: '🏁', games: 5 },
-        { id: 3, name: 'Strategy', icon: '♟️', games: 4 },
-        { id: 4, name: 'RPG', icon: '🐉', games: 3 },
-        { id: 5, name: 'Arcade', icon: '👾', games: 3 },
-        { id: 6, name: 'Adventure', icon: '🗺️', games: 2 },
-        { id: 7, name: 'Puzzle', icon: '🧩', games: 2 },
-        { id: 8, name: 'Sports', icon: '⚽', games: 3 },
-        { id: 9, name: 'Shooter', icon: '🎯', games: 2 },
-        { id: 10, name: 'Fantasy', icon: '✨', games: 2 },
-    ];
-
     // ========== POPULATE GAMES ==========
     function populateGames() {
         const gamesGrid = document.getElementById('games-grid');
@@ -1091,17 +1334,8 @@
         });
     }
 
-    // ========== POPULATE CATEGORIES ==========
-    function populateCategories() {
-        const categoriesGrid = document.getElementById('categories-grid');
-        categoriesGrid.innerHTML = categoriesData.map(cat => `
-            <div class="category-card" data-category="${cat.id}">
-                <div class="category-icon">${cat.icon}</div>
-                <h3 class="category-name">${cat.name}</h3>
-                <p class="category-count">${cat.games} Games</p>
-            </div>
-        `).join('');
-
+    // ========== CATEGORY CARDS EVENT LISTENERS ==========
+    function setupCategoryListeners() {
         document.querySelectorAll('.category-card').forEach(card => {
             card.addEventListener('click', () => {
                 const catName = card.querySelector('.category-name').textContent;
@@ -1117,6 +1351,19 @@
     const searchInput = document.getElementById('search-input');
     const searchResults = document.getElementById('search-results');
     const searchResultsContent = document.getElementById('search-results-content');
+
+    const categoriesData = [
+        { id: 1, name: 'Action', icon: '⚔️', games: 7 },
+        { id: 2, name: 'Racing', icon: '🏁', games: 5 },
+        { id: 3, name: 'Strategy', icon: '♟️', games: 4 },
+        { id: 4, name: 'RPG', icon: '🐉', games: 3 },
+        { id: 5, name: 'Arcade', icon: '👾', games: 3 },
+        { id: 6, name: 'Adventure', icon: '🗺️', games: 2 },
+        { id: 7, name: 'Puzzle', icon: '🧩', games: 2 },
+        { id: 8, name: 'Sports', icon: '⚽', games: 3 },
+        { id: 9, name: 'Shooter', icon: '🎯', games: 2 },
+        { id: 10, name: 'Fantasy', icon: '✨', games: 2 },
+    ];
 
     searchInput.addEventListener('input', (e) => {
         const query = e.target.value.toLowerCase().trim();
@@ -1348,7 +1595,7 @@
     });
 
     populateGames();
-    populateCategories();
+    setupCategoryListeners();
 
     console.log('🌌 Playverse24 Galactic Experience Active');
 </script>
