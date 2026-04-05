@@ -510,6 +510,7 @@
             clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
             min-height: clamp(200px, 30vw, 320px);
             justify-content: center;
+            text-decoration: none;
         }
 
         .game-card::before {
@@ -1197,7 +1198,7 @@
             <div class="category-card">
                 <div class="category-icon">🧩</div>
                 <h3 class="category-name">Puzzle</h3>
-                <p class="category-count">2 Games</p>
+                <p class="category-count">3 Games</p>
             </div>
 
             <div class="category-card">
@@ -1291,45 +1292,50 @@
 <script>
     // ========== GAMES DATA ==========
     const gamesData = [
-        { id: 1, name: 'Cyber Racer', icon: '🏎️', category: 'racing', info: 'Nebula Speed Run' },
-        { id: 2, name: 'Space Blaster', icon: '👾', category: 'action', info: 'Cosmic Battle' },
-        { id: 3, name: 'Holo Grid', icon: '◈', category: 'strategy', info: 'Quantum Puzzle' },
-        { id: 4, name: 'Void Explorer', icon: '🚀', category: 'adventure', info: 'Deep Space Quest' },
-        { id: 5, name: 'Plasma Storm', icon: '⚡', category: 'action', info: 'Electric Combat' },
-        { id: 6, name: 'Nebula Rush', icon: '💨', category: 'racing', info: 'Galactic Race' },
-        { id: 7, name: 'Quantum Knight', icon: '⚔️', category: 'rpg', info: 'Epic Fantasy' },
-        { id: 8, name: 'Crystal Maze', icon: '💎', category: 'puzzle', info: 'Logic Challenge' },
-        { id: 9, name: 'Dragon Wars', icon: '🐉', category: 'rpg', info: 'Battle Saga' },
-        { id: 10, name: 'Neon Blitz', icon: '⭐', category: 'arcade', info: 'Retro Arcade' },
-        { id: 11, name: 'Shadow Ops', icon: '🕵️', category: 'action', info: 'Stealth Mission' },
-        { id: 12, name: 'Titan Clash', icon: '💪', category: 'action', info: 'Giant Battles' },
-        { id: 13, name: 'Infinity Run', icon: '∞', category: 'racing', info: 'Endless Speed' },
-        { id: 14, name: 'Mystic Quest', icon: '🔮', category: 'adventure', info: 'Magic Journey' },
-        { id: 15, name: 'Cyber Ninja', icon: '🥷', category: 'action', info: 'Future Combat' },
-        { id: 16, name: 'Galaxy Tycoon', icon: '💰', category: 'strategy', info: 'Build Empire' },
-        { id: 17, name: 'Pixel Paradise', icon: '🎨', category: 'arcade', info: 'Art Puzzle' },
-        { id: 18, name: 'Thunder Road', icon: '🌩️', category: 'racing', info: 'Storm Rally' },
-        { id: 19, name: 'Solar Flare', icon: '☀️', category: 'action', info: 'Energy Blast' },
-        { id: 20, name: 'Echo Protocol', icon: '🔊', category: 'strategy', info: 'Mind Games' },
+        { id: 1, name: 'Cyber Racer', icon: '🏎️', category: 'racing', info: 'Nebula Speed Run', link: '#' },
+        { id: 2, name: 'Space Blaster', icon: '👾', category: 'action', info: 'Cosmic Battle', link: '#' },
+        { id: 3, name: 'Holo Grid', icon: '◈', category: 'strategy', info: 'Quantum Puzzle', link: '#' },
+        { id: 4, name: 'Void Explorer', icon: '🚀', category: 'adventure', info: 'Deep Space Quest', link: '#' },
+        { id: 5, name: 'Plasma Storm', icon: '⚡', category: 'action', info: 'Electric Combat', link: '#' },
+        { id: 6, name: 'Nebula Rush', icon: '💨', category: 'racing', info: 'Galactic Race', link: '#' },
+        { id: 7, name: 'Quantum Knight', icon: '⚔️', category: 'rpg', info: 'Epic Fantasy', link: '#' },
+        { id: 8, name: 'Crystal Maze', icon: '💎', category: 'puzzle', info: 'Logic Challenge', link: '#' },
+        { id: 9, name: 'Dragon Wars', icon: '🐉', category: 'rpg', info: 'Battle Saga', link: '#' },
+        { id: 10, name: 'Neon Blitz', icon: '⭐', category: 'arcade', info: 'Retro Arcade', link: '#' },
+        { id: 11, name: 'Shadow Ops', icon: '🕵️', category: 'action', info: 'Stealth Mission', link: '#' },
+        { id: 12, name: 'Titan Clash', icon: '💪', category: 'action', info: 'Giant Battles', link: '#' },
+        { id: 13, name: 'Infinity Run', icon: '∞', category: 'racing', info: 'Endless Speed', link: '#' },
+        { id: 14, name: 'Mystic Quest', icon: '🔮', category: 'adventure', info: 'Magic Journey', link: '#' },
+        { id: 15, name: 'Cyber Ninja', icon: '🥷', category: 'action', info: 'Future Combat', link: '#' },
+        { id: 16, name: 'Galaxy Tycoon', icon: '💰', category: 'strategy', info: 'Build Empire', link: '#' },
+        { id: 17, name: 'Pixel Paradise', icon: '🎨', category: 'arcade', info: 'Art Puzzle', link: '#' },
+        { id: 18, name: 'Thunder Road', icon: '🌩️', category: 'racing', info: 'Storm Rally', link: '#' },
+        { id: 19, name: 'Solar Flare', icon: '☀️', category: 'action', info: 'Energy Blast', link: '#' },
+        { id: 20, name: 'Echo Protocol', icon: '🔊', category: 'strategy', info: 'Mind Games', link: '#' },
+        { id: 21, name: '2048', icon: '🧮', category: 'puzzle', info: 'Number Merge', link: 'games/2048/index.html' },
     ];
 
     // ========== POPULATE GAMES ==========
     function populateGames() {
         const gamesGrid = document.getElementById('games-grid');
         gamesGrid.innerHTML = gamesData.map(game => `
-            <div class="game-card" data-game="${game.id}">
+            <a href="${game.link}" class="game-card" data-game="${game.id}">
                 <div class="game-icon">${game.icon}</div>
                 <h3 class="game-title">${game.name}</h3>
                 <p class="game-info">${game.info}</p>
-            </div>
+            </a>
         `).join('');
 
         document.querySelectorAll('.game-card').forEach(card => {
-            card.addEventListener('click', () => {
-                const gameName = card.querySelector('.game-title').textContent;
-                const feedback = document.getElementById('game-feedback');
-                feedback.textContent = `▶ Launching ${gameName}...`;
-                setTimeout(() => { feedback.textContent = ''; }, 2000);
+            card.addEventListener('click', (e) => {
+                const link = card.getAttribute('href');
+                if (link === '#') {
+                    e.preventDefault();
+                    const gameName = card.querySelector('.game-title').textContent;
+                    const feedback = document.getElementById('game-feedback');
+                    feedback.textContent = `▶ Launching ${gameName}...`;
+                    setTimeout(() => { feedback.textContent = ''; }, 2000);
+                }
             });
         });
     }
@@ -1359,7 +1365,7 @@
         { id: 4, name: 'RPG', icon: '🐉', games: 3 },
         { id: 5, name: 'Arcade', icon: '👾', games: 3 },
         { id: 6, name: 'Adventure', icon: '🗺️', games: 2 },
-        { id: 7, name: 'Puzzle', icon: '🧩', games: 2 },
+        { id: 7, name: 'Puzzle', icon: '🧩', games: 3 },
         { id: 8, name: 'Sports', icon: '⚽', games: 3 },
         { id: 9, name: 'Shooter', icon: '🎯', games: 2 },
         { id: 10, name: 'Fantasy', icon: '✨', games: 2 },
